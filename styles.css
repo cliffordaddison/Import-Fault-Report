@@ -10,7 +10,8 @@ body {
   font-family: roboto, Arial;
   height: 100vh;
   width: 100vw;
-  overflow:auto;
+  overflow: hidden;
+  zoom: normal;
 }
 
 button {
