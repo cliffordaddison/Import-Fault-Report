@@ -1,0 +1,95 @@
+body {
+    max-width: 1024px;
+    font-family: roboto, Arial;
+}
+
+h2 {
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.header {
+    background-color: blue;
+    color: white;
+    height: 55px;
+
+}
+
+/* text-box */
+
+.text-container p {
+    margin-bottom: 5px;
+}
+
+.text-box {
+    height: 80px;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 16px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 3px;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+    border-width: 1px;
+    margin-bottom: 30px;
+}
+.text-box::placeholder{
+    font-family: roboto,Arial;
+    font-size: 16px;
+    color:rgb(192, 192, 192);
+}
+/* button */
+
+.button-container .box {
+    height: 50px;
+    text-align: center;
+
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.button-container .box {
+    background-color: rgb(236, 227, 227);
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+
+.button-container .box:hover {
+    background-color: rgba(214, 206, 206, 0.945);
+}
+
+.button-container .box:active {
+    opacity: 0.5;
+}
+
+.Cancel-button-container {
+    display: grid;
+    grid-template-columns: 0.485fr;
+}
+
+.Cancel-button-container .box {
+    background-color: rgb(10, 17, 83);
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    margin-top: 4rem;
+    color: #fff;
+}
+
+.Cancel-button-container .box:hover {
+    opacity: 0.8;
+}
+
+.Cancel-button-container .box:active {
+    opacity: 0.5;
+}

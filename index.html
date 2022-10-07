@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <script src="https://kit.fontawesome.com/6ac91fa357.js" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+    <div class="header">
+        <h2>Dashboard - Imports</h2>
+    </div>
+    <section>
+        <div class="heading-container">
+            <div class="box-1">
+                <p>Import 1 </p>
+                <p class="scan-serial">Serial&#58; 2662</p>
+            </div>
+            <div class="box-2">
+                <p>Import 2 </p>
+                <p class="scan-serial">Serial&#58; 2663</p>
+            </div>
+            <div class="box-3">
+                <p>Import 3 </p>
+                <p class="scan-serial">Serial&#58; 2669</p>
+            </div>
+        </div>
+
+        <!-- BUTTONS -->
+
+        <!-- scanfailed -->
+        <div class="button-container">
+
+            <a class="scanfailed-button" href="./Import-scanfailed/scanfailed-2662.html">
+                <button class="scanfailed-button">SCAN
+                    FAILED
+                </button>
+            </a>
+
+            <a class="scanfailed-button" href="./Import-scanfailed/scanfailed-2663.html">
+                <button class="scanfailed-button">SCAN
+                    FAILED
+                </button>
+            </a>
+
+            <a class="scanfailed-button" href="./Import-scanfailed/scanfailed-2669.html">
+                <button class="scanfailed-button">SCAN
+                    FAILED
+                </button>
+            </a>
+
+            <!-- general-event -->
+           <a class="general-button" href="./general-event/general-event-2662.html"><button class="general-button">GENERAL EVENT
+            </button></a>
+            <a class="general-button" href="./general-event/general-event-2663.html"><button class="general-button">GENERAL EVENT
+            </button></a>
+            <a class="general-button" href="./general-event/general-event-2669.html"><button class="general-button">GENERAL EVENT
+            </button></a>
+
+            <!-- scanner event -->
+            <a class="scanevent-button" href="./scanner-event/scanner-event-2662.html">
+                <button class="scanevent-button">
+                    SCANNER EVENT
+                </button>
+            </a>
+            <a class="scanevent-button" href="./scanner-event/scanner-event-2663.html"><button class="scanevent-button">SCANNER EVENT
+            </button></a>
+            <a class="scanevent-button" href="./scanner-event/scanner-event-2669.html"><button class="scanevent-button">SCANNER EVENT
+            </button></a>
+        </div>
+
+        <!-- refresh and site event button -->
+
+        <div class="button-container-2">
+            <button class="refresh-button">
+                <i class="fas fa-redo"></i>
+                <span>Refresh</span>
+            </button>
+            <button class="site-event-button">SITE EVENT</button>
+
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <button class="dasboard-button">Dashboard</button>
+            <button class="Settings-button">
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+                <p class="settings-text">Settings</p>
+            </button>
+        </div>
+    </footer>
+</body>
+
+</html>
