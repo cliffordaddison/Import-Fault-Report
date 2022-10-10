@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   outline: 0;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 body {
@@ -10,13 +10,21 @@ body {
   font-family: roboto, Arial;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
-  zoom: normal;
+  max-zoom: 100%;
+  min-zoom: 100%;
 }
 
 button {
   width: 100%;
   border: none;
+}
+
+.refresh-button,
+.site-event-button,
+.scanevent-button,
+.scanfailed-button,
+.general-button {
+  border-radius:2.5px;
 }
 
 p {
@@ -91,8 +99,6 @@ section .button-container {
   background-color: rgb(31, 31, 174);
   color: #fff;
   height: 50px;
-  border: none;
-  border-radius: 2.5px;
   transition: opacity 0.15s;
   text-align: center;
   width: 100%;
@@ -112,8 +118,6 @@ section .button-container {
 .general-button {
   background-color: rgb(236, 227, 227);
   height: 50px;
-  border: none;
-  border-radius: 2px;
   cursor: pointer;
   transition: opacity 0.15s;
   margin: 0 0 5px;
@@ -132,8 +136,6 @@ section .button-container {
 .scanevent-button {
   background-color: rgb(236, 227, 227);
   height: 50px;
-  border: none;
-  border-radius: 2px;
   cursor: pointer;
   transition: opacity 0.15s;
 }
@@ -161,8 +163,6 @@ section .button-container-2 {
   background-color: rgb(31, 31, 174);
   color: #fff;
   height: 50px;
-  border: none;
-  border-radius: 2px;
   width: 100px;
   transition: opacity 0.15s;
 }
@@ -185,8 +185,6 @@ section .button-container-2 {
   background-color: rgb(31, 31, 174);
   color: #fff;
   height: 50px;
-  border: none;
-  border-radius: 2px;
   width: 100px;
   transition: opacity 0.15s;
 }
@@ -212,11 +210,10 @@ section .button-container-2 {
   right: 0;
 }
 
-.Settings-button {
+.settings-button {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .settings-text {
@@ -364,7 +361,8 @@ section .event-type {
 
 .cancel-button-container {
   display: grid;
-  grid-template-columns: 0.485fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
   width: 85%;
   margin: auto;
 }
@@ -393,5 +391,10 @@ section .event-type {
 }
 
 .scanner-event-type .box {
-  margin-top: .9rem;
+  margin-top: 0.9rem;
+}
+
+
+.dashboard-button:focus {
+  background-color: rgba(181, 181, 181, 0.4);
 }
