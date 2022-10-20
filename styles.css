@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   outline: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
+  font-family: roboto, Arial, Helvetica, sans-serif;
 }
 
 body {
   position: relative;
-  font-family: roboto, Arial;
   height: 100vh;
   width: 100vw;
   max-zoom: 100%;
@@ -23,7 +23,8 @@ button {
 .site-event-button,
 .scanevent-button,
 .scanfailed-button,
-.general-button {
+.general-button, 
+.box {
   border-radius:2.5px;
 }
 
@@ -72,7 +73,8 @@ section .button-container a {
 section .heading-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 40px 40px 10px;
+  margin: 40px auto 10px;
+  width: 85%;
 }
 
 section .heading-container .scan-serial {
@@ -86,7 +88,7 @@ section .heading-container .scan-serial {
 section .button-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 10px;    /* column-gap: 10px; */
+  row-gap: 20px;    /* column-gap: 10px; */
   width: 85%;
   margin: auto;
   overflow: hidden;
@@ -102,7 +104,6 @@ section .button-container {
   transition: opacity 0.15s;
   text-align: center;
   width: 100%;
-  margin: 0 0 10px;
 }
 
 .scanfailed-button:hover {
@@ -120,7 +121,6 @@ section .button-container {
   height: 50px;
   cursor: pointer;
   transition: opacity 0.15s;
-  margin: 0 0 5px;
 }
 
 .general-button:hover {
@@ -214,12 +214,20 @@ section .button-container-2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.4ms ease-in-out;
+}
+
+.settings-button:focus {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+.settings-button:hover {
+  cursor: pointer;
 }
 
 .settings-text {
   display: inline;
   margin-left: 5px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .material-symbols-outlined {
@@ -233,17 +241,18 @@ section .button-container-2 {
 .text-box {
   height: 80px;
   width: 100%;
-  padding-left: 10px;
+  padding: 10px;
   font-size: 16px;
   border-style: solid;
   border-color: rgb(192, 192, 192);
   box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
   border-width: 1px;
   margin-bottom: 30px;
+  resize: none;
 }
 
 .text-box::placeholder {
-  font-family: roboto, Arial;
+  padding: auto;
   font-size: 16px;
   color: rgb(192, 192, 192);
 }
@@ -262,42 +271,15 @@ section .text-container p {
 
 /* button */
 
-.button-container .box {
-  height: 50px;
-  text-align: center;
-}
-
 #failure-type-btn {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
 }
 
-.button-container .box {
-  background-color: rgb(236, 227, 227);
-  height: 50px;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.15s;
-}
-
-.button-container .box:hover {
-  background-color: rgba(214, 206, 206, 0.945);
-}
-
-.button-container .box:active {
-  opacity: 0.5;
-}
-
 
 /* GENERAL EVENT */
 /* button */
-
-.button-container .box {
-  height: 50px;
-  text-align: center;
-}
-
 .button-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -309,17 +291,9 @@ section .text-container p {
   height: 50px;
   border: none;
   cursor: pointer;
-  transition: opacity 0.15s;
+  transition: all 0.15ms;
+  text-align: center;
 }
-
-.button-container .box:hover {
-  background-color: rgba(214, 206, 206, 0.945);
-}
-
-.button-container .box:active {
-  opacity: 0.5;
-}
-
 
 /* SCANNER EVENT CSS */
 section .event-type {
@@ -327,34 +301,6 @@ section .event-type {
 }
 
 /* button */
-
-.button-container .box {
-  height: 50px;
-  text-align: center;
-}
-
-.button-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
-}
-
-.button-container .box {
-  background-color: rgb(236, 227, 227);
-  height: 50px;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.15s;
-}
-
-.button-container .box:hover {
-  background-color: rgba(214, 206, 206, 0.945);
-}
-
-.button-container .box:active {
-  opacity: 0.5;
-}
-
 .button-container .scanevent-button {
   text-align: center;
 }
@@ -364,16 +310,15 @@ section .event-type {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
   width: 85%;
-  margin: auto;
+  margin: 4rem auto 0;
 }
 
 .cancel-button-container .box {
-  background-color: rgb(10, 17, 83);
+  background-color: rgb(6, 12, 69);
   height: 50px;
   border: none;
   cursor: pointer;
-  transition: opacity 0.15s;
-  margin-top: 4rem;
+  transition: all 0.15s;
   color: #fff;
   contain: content;
 }
@@ -383,7 +328,7 @@ section .event-type {
 }
 
 .cancel-button-container .box:active {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .scanner-event-type {
@@ -394,7 +339,28 @@ section .event-type {
   margin-top: 0.9rem;
 }
 
-
 .dashboard-button:focus {
-  background-color: rgba(181, 181, 181, 0.4);
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+.dashboard-button{
+  transition: all 0.4ms ease-in-out;
+}
+
+.dashboard-button:hover {
+  cursor: pointer;
+}
+
+#keep-active-btn,
+#event-resolved-btn {
+  visibility: hidden;
+}
+
+#keep-active-btn {
+  background: rgb(31, 31, 174);
+}
+
+#event-resolved-btn {
+  background: rgb(10, 137, 103);
+  padding: 0 10px;
 }

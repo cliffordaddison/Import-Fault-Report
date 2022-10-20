@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -23,56 +25,68 @@
       <p>
         Enter Details Of Event
       </p>
-      <input class="text-box" type="text" placeholder="Select an event and enter details here">
+      <textarea placeholder="Select an event and enter details here" class="text-box" name="" id=""></textarea>
       <p>
         Step 1&#45; Select Event Type
       </p>
     </div>
     <div class="button-container">
-      <button class="box">
+      <button id="event-start" class="click-box box">
         SCANNER RESTART
       </button>
-      <button class="box">
+      <button id="event-start" class="click-box box">
         IPS FAILURE
       </button>
-      <button class="box">
+      <button id="event-start" class="click-box box">
         CONGESTION
       </button>
-      <button class="box">
+      <button id="event-start" class="click-box box">
         KU35 FAULT
       </button>
-      <button class="box">
+      <button id="event-start" class="click-box box">
         CORRECTIVE MAINT&#46;
       </button>
-      <button class="box">
+      <button id="event-start" class="click-box box">
         ACCELERATOR FAULT
       </button>
-      <button class="box">
+      <button id="event-start" class="click-box box">
         WEATHER
       </button>
-      <button class="box">
+      <button id="event-start" class="click-box box">
         XDS FAULT
       </button>
-      <button class="box">
+      <button id="event-start" class="click-box box">
         DET&#46; BOOM FAULT
       </button>
-      <button class="box">
+      <button id="event-start" class="click-box box">
         CHILLER FAULT
       </button>
-      <button class="box">
+      <button id="event-start" class="click-box box">
         OCR
       </button>
-      <button class="box">
+      <button id="event-start" class="click-box box">
         SENSOR FAULT
       </button>
     </div>
     <div class="cancel-button-container">
-      <a id="cancel-btn" href="../index.html">
-        <button class="box">CANCEL &#45; DON&#39;T SAVE</button>
-    </a>
+      <a>
+        <button id="cancel-btn" class="box">
+          CANCEL &#45; DON&#39;T SAVE
+        </button>
+     </a>
+     <a>
+        <button id="keep-active-btn" class="box"><i class="fa fa-clock-o"></i> 
+          BACK &#45; KEEP ACTIVE
+        </button>
+      </a>
+      <a>
+        <button type="submit" id="event-resolved-btn" class="box">
+          EVENT RESOLVED <span id="timer"></span>
+        </button>
+      </a>
     </div>
 
   </section>
 </body>
-
+<script src="../index.js"></script>
 </html>
